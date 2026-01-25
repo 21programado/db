@@ -1,5 +1,6 @@
 const fileInput = document.getElementById("fileInput");
 const content = document.getElementById("content");
+const printBtn = document.getElementById("printBtn");
 
 let SQL;
 
@@ -62,4 +63,10 @@ fileInput.addEventListener("change", async (event) => {
   html += "</tbody></table></div>";
 
   content.innerHTML = html;
+
+  printBtn.hidden = false;
 });
+
+printBtn.onclick = () => {
+  window.print();
+};
