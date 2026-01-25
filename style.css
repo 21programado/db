@@ -52,3 +52,23 @@ th {
 tr:nth-child(even) {
   background: #1a1a1a;
 }
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  header,
+  #printBtn {
+    display: none;
+  }
+
+  table {
+    font-size: 10pt;
+  }
+
+  th, td {
+    border: 1px solid #000;
+  }
+}
